@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_nhanes_want_print",
+  "source_file": "utl-importing-nhanes-data-in-raw-and-from-sqllite-database.sas",
+  "source_blob_sha": "35df1b054b98d9970cc681aa2dbde9d94597ba1c",
+  "source_commit": "20afe3cf1ca84e58a15c56a9b8157d04ecb8126f",
+  "notes": "Upstream imports NHANES 'imp' data from an external SQLite DB (d:/db/imp.db) via an R bridge (%utl_rbeginx/%utl_rendx + fn_tosas9x.R), lands it as SD1.WANT (33994 x 201), and PROC PRINTs obs=6. SQLite source, R bridge, and d:/ Windows paths are non-portable, so WANT is built inline with the exact NHANES demographic variable shape from the upstream str(readindb)/CONTENTS output (ROWNAMES, ROW_NAMES, SEQN, DMPFSEQ, DMPSTAT, DMARETHN, DMARACER, DMAETHNR), seeded with the SEQN/DMPFSEQ sample values the author records. The author's OBS=6 PROC PRINT runs unmodified; prints 6 of 10 rows."
+}
